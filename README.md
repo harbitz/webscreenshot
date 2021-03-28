@@ -33,6 +33,18 @@ http(s)://domain_or_ip:port(/resource)
 domain_or_ip:port(/resource)
 domain_or_ip(/resource)
 ```
+### Docker options
+**Single URL**
+```
+# docker run -it --rm -v $(pwd)/screenshots:/screenshots harbitz/webscreenshot "https://example.com"
+```
+
+**URLs from list**
+
+Put list.txt containing URLs into local screenshots folder
+```
+# docker run -it --rm -v $(pwd)/screenshots:/screenshots harbitz/webscreenshot -i /screenshots/domains.txt
+```
 
 ### Options
 ```

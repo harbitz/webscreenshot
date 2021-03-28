@@ -39,13 +39,18 @@ domain_or_ip(/resource)
 # docker run -it --rm -v $(pwd)/screenshots:/screenshots harbitz/webscreenshot "https://example.com"
 ```
 
+
 **URLs from list**
 
-Put list.txt containing URLs into local screenshots folder
+Put list (e.g. ./screenshots/domains.txt) containing URLs into local screenshots folder.
+This command defaults to list in /screenshots/domains.txt:
 ```
-# docker run -it --rm -v $(pwd)/screenshots:/screenshots harbitz/webscreenshot -i /screenshots/domains.txt
+# docker run -it --rm -v $(pwd)/screenshots:/screenshots harbitz/webscreenshot
 ```
-
+Use another list than the default:
+```
+# docker run -it --rm -v $(pwd)/screenshots:/screenshots harbitz/webscreenshot -i /screenshots/yourlist.txt
+```
 ### Options
 ```
 webscreenshot.py version 2.94
